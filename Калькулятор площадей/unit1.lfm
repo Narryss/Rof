@@ -1,0 +1,403 @@
+object Form1: TForm1
+  Left = 618
+  Height = 510
+  Top = 112
+  Width = 722
+  BorderStyle = bsSizeToolWin
+  Caption = 'Калькулятор площади фигур'
+  ClientHeight = 510
+  ClientWidth = 722
+  Color = clSilver
+  LCLVersion = '3.4.0.0'
+  object Text_Rectangle: TLabel
+    Left = 19
+    Height = 15
+    Top = 45
+    Width = 105
+    Caption = 'Прямоугольник '
+    Font.CharSet = RUSSIAN_CHARSET
+    Font.Name = 'Segoe UI Black'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    Font.Style = [fsBold]
+    ParentFont = False
+  end
+  object Length_Text: TLabel
+    Left = 19
+    Height = 15
+    Top = 70
+    Width = 35
+    Caption = 'Длина'
+  end
+  object Button_Rectangle: TButton
+    Left = 186
+    Height = 25
+    Top = 77
+    Width = 75
+    Caption = 'Вычислить'
+    TabOrder = 0
+    OnClick = Button_RectangleClick
+    OnKeyPress = Button_RectangleKeyPress
+  end
+  object Rectangle_Length_Edit: TEdit
+    Left = 90
+    Height = 23
+    Top = 64
+    Width = 80
+    TabOrder = 1
+    OnKeyPress = Rectangle_Length_EditKeyPress
+  end
+  object Width_Text: TLabel
+    Left = 20
+    Height = 15
+    Top = 96
+    Width = 45
+    Caption = 'Ширина'
+  end
+  object Width_Rectangle_Edit: TEdit
+    Left = 90
+    Height = 23
+    Top = 90
+    Width = 80
+    TabOrder = 2
+    OnKeyPress = Width_Rectangle_EditKeyPress
+  end
+  object Answer_Rectangle: TEdit
+    Left = 326
+    Height = 23
+    Top = 77
+    Width = 150
+    TabOrder = 3
+  end
+  object Answer1: TLabel
+    Left = 275
+    Height = 15
+    Top = 83
+    Width = 34
+    Caption = 'Ответ:'
+  end
+  object Square_Text: TLabel
+    Left = 22
+    Height = 15
+    Top = 128
+    Width = 51
+    Caption = 'Квадрат'
+    Font.CharSet = RUSSIAN_CHARSET
+    Font.Name = 'Segoe UI Black'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    Font.Style = [fsBold]
+    ParentFont = False
+  end
+  object Side_Square_Text: TLabel
+    Left = 19
+    Height = 15
+    Top = 154
+    Width = 47
+    Caption = 'Сторона'
+  end
+  object Button_Square: TButton
+    Left = 186
+    Height = 25
+    Top = 147
+    Width = 75
+    Caption = 'Вычислить'
+    TabOrder = 4
+    OnClick = Button_SquareClick
+  end
+  object Side_Square_Edit: TEdit
+    Left = 90
+    Height = 23
+    Top = 147
+    Width = 80
+    TabOrder = 5
+    OnKeyPress = Side_Square_EditKeyPress
+  end
+  object Answer_Square: TEdit
+    Left = 326
+    Height = 23
+    Top = 147
+    Width = 150
+    TabOrder = 6
+  end
+  object Answer2: TLabel
+    Left = 275
+    Height = 15
+    Top = 154
+    Width = 34
+    Caption = 'Ответ:'
+  end
+  object Triangle_Text: TLabel
+    Left = 19
+    Height = 15
+    Top = 186
+    Width = 81
+    Caption = 'Треугольник'
+    Font.CharSet = RUSSIAN_CHARSET
+    Font.Name = 'Segoe UI Black'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    Font.Style = [fsBold]
+    ParentFont = False
+  end
+  object Base_Text: TLabel
+    Left = 20
+    Height = 15
+    Top = 211
+    Width = 61
+    Caption = 'Основание'
+  end
+  object Button_Triangle: TButton
+    Left = 186
+    Height = 25
+    Top = 218
+    Width = 75
+    Caption = 'Вычислить'
+    TabOrder = 7
+    OnClick = Button_TriangleClick
+  end
+  object Base_Triangle_Edit: TEdit
+    Left = 90
+    Height = 23
+    Top = 205
+    Width = 80
+    TabOrder = 8
+    OnKeyPress = Base_Triangle_EditKeyPress
+  end
+  object Height_Text: TLabel
+    Left = 19
+    Height = 15
+    Top = 237
+    Width = 40
+    Caption = 'Высота'
+  end
+  object Height_Triangle_Edit: TEdit
+    Left = 90
+    Height = 23
+    Top = 230
+    Width = 80
+    TabOrder = 9
+    OnKeyPress = Height_Triangle_EditKeyPress
+  end
+  object Answer_Triangle: TEdit
+    Left = 326
+    Height = 23
+    Top = 220
+    Width = 150
+    TabOrder = 10
+  end
+  object Answer3: TLabel
+    Left = 275
+    Height = 15
+    Top = 226
+    Width = 34
+    Caption = 'Ответ:'
+  end
+  object Circle_Text: TLabel
+    Left = 19
+    Height = 15
+    Top = 269
+    Width = 28
+    Caption = 'Круг'
+    Font.CharSet = RUSSIAN_CHARSET
+    Font.Name = 'Segoe UI Black'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    Font.Style = [fsBold]
+    ParentFont = False
+  end
+  object Radius_Text: TLabel
+    Left = 20
+    Height = 15
+    Top = 289
+    Width = 38
+    Caption = 'Радиус'
+  end
+  object Button_Circle: TButton
+    Left = 186
+    Height = 25
+    Top = 279
+    Width = 75
+    Caption = 'Вычислить'
+    TabOrder = 11
+    OnClick = Button_CircleClick
+  end
+  object Radius_Circle_Edit: TEdit
+    Left = 90
+    Height = 23
+    Top = 282
+    Width = 80
+    TabOrder = 12
+    OnKeyPress = Radius_Circle_EditKeyPress
+  end
+  object Answer_Circle: TEdit
+    Left = 326
+    Height = 23
+    Top = 282
+    Width = 150
+    TabOrder = 13
+  end
+  object Answer4: TLabel
+    Left = 275
+    Height = 15
+    Top = 288
+    Width = 34
+    Caption = 'Ответ:'
+  end
+  object Parallelogram_Text: TLabel
+    Left = 19
+    Height = 15
+    Top = 320
+    Width = 101
+    Caption = 'Параллелограм'
+    Font.CharSet = RUSSIAN_CHARSET
+    Font.Name = 'Segoe UI Black'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    Font.Style = [fsBold]
+    ParentFont = False
+  end
+  object Side_Parallelogram_Text: TLabel
+    Left = 19
+    Height = 15
+    Top = 346
+    Width = 47
+    Caption = 'Сторона'
+  end
+  object Button_Parallelogram: TButton
+    Left = 186
+    Height = 25
+    Top = 352
+    Width = 75
+    Caption = 'Вычислить'
+    TabOrder = 14
+    OnClick = Button_ParallelogramClick
+  end
+  object Side_Parallelogram_Edit: TEdit
+    Left = 90
+    Height = 23
+    Top = 339
+    Width = 80
+    TabOrder = 15
+    OnKeyPress = Side_Parallelogram_EditKeyPress
+  end
+  object Height_Parallelogram_Text: TLabel
+    Left = 19
+    Height = 15
+    Top = 371
+    Width = 40
+    Caption = 'Высота'
+  end
+  object Height_Parallelogram_Edit: TEdit
+    Left = 90
+    Height = 23
+    Top = 365
+    Width = 80
+    TabOrder = 16
+    OnKeyPress = Height_Parallelogram_EditKeyPress
+  end
+  object Answer_Parallelogram: TEdit
+    Left = 326
+    Height = 23
+    Top = 354
+    Width = 150
+    TabOrder = 17
+  end
+  object Answer5: TLabel
+    Left = 275
+    Height = 15
+    Top = 361
+    Width = 34
+    Caption = 'Ответ:'
+  end
+  object Trapezoid_Text: TLabel
+    Left = 19
+    Height = 15
+    Top = 403
+    Width = 62
+    Caption = 'Трапеция'
+    Font.CharSet = RUSSIAN_CHARSET
+    Font.Name = 'Segoe UI Black'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    Font.Style = [fsBold]
+    ParentFont = False
+  end
+  object Upper_Side_Trapezoid_Text: TLabel
+    Left = 19
+    Height = 15
+    Top = 429
+    Width = 148
+    Caption = 'Верхняя сторона трапеции'
+  end
+  object Button_Trapezoid: TButton
+    Left = 269
+    Height = 25
+    Top = 446
+    Width = 75
+    Caption = 'Вычислить'
+    TabOrder = 18
+    OnClick = Button_TrapezoidClick
+  end
+  object Upper_Side_Trapezoid_Edit: TEdit
+    Left = 181
+    Height = 23
+    Top = 422
+    Width = 80
+    TabOrder = 19
+    OnKeyPress = Upper_Side_Trapezoid_EditKeyPress
+  end
+  object Height_Trapezoid_Text: TLabel
+    Left = 19
+    Height = 15
+    Top = 454
+    Width = 40
+    Caption = 'Высота'
+  end
+  object Height_Trapezoid_Edit: TEdit
+    Left = 181
+    Height = 23
+    Top = 448
+    Width = 80
+    TabOrder = 20
+    OnKeyPress = Height_Trapezoid_EditKeyPress
+  end
+  object Answer_Trapezoid: TEdit
+    Left = 397
+    Height = 23
+    Top = 448
+    Width = 80
+    TabOrder = 21
+  end
+  object Answer6: TLabel
+    Left = 352
+    Height = 15
+    Top = 454
+    Width = 34
+    Caption = 'Ответ:'
+  end
+  object Lower_Side_Trapezoid_Text: TLabel
+    Left = 19
+    Height = 15
+    Top = 480
+    Width = 147
+    Caption = 'Нижняя сторона трапеции'
+  end
+  object Lower_Side_Trapezoid_Edit: TEdit
+    Left = 181
+    Height = 23
+    Top = 475
+    Width = 80
+    TabOrder = 22
+    OnKeyPress = Lower_Side_Trapezoid_EditKeyPress
+  end
+  object StaticText: TStaticText
+    Left = 241
+    Height = 20
+    Top = 25
+    Width = 180
+    BorderStyle = sbsSingle
+    Caption = 'Калькулятор площадей фигур'
+    TabOrder = 23
+  end
+end
